@@ -1,0 +1,24 @@
+project_name: 'Real-time Transaction Analytics and Monitoring'
+app_name: 'RTAM'
+env: 'PROD'
+
+graph_db:
+  dbms_name : 'Neo4J'
+  uri : 'neo4j+s://8ff23937.databases.neo4j.io'
+  username : 'neo4j'
+  password : 'HYyQNQgQugZfq-L1uujmnhOQDv1Oji6Li3KaLNiAg9E'
+
+main_db:
+  dbms_name : 'PostgreSQL'
+  uri : 'abc'
+
+data:
+  chunk_size: 10000
+
+notification:
+  enabled: true
+
+server:
+  http:
+    nthreads: 4
+    port: 5000

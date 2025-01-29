@@ -1,0 +1,10 @@
+.git
+__pycache__/
+.ipynb_checkpoints/
+.virtual_documents/
+.pytest_cache/
+.vscode/
+logs/
+
+*.csv
+*.ipynb

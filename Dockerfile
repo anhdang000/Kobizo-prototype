@@ -14,6 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 5000
 
-HEALTHCHECK CMD curl --fail http://localhost:5000/
-
 CMD ["python", "main.py", "production"]

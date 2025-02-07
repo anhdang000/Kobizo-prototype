@@ -4,9 +4,9 @@ from dependency_injector.wiring import Provide, inject
 from flask import Flask
 from waitress import serve
 from src.module.application_container import ApplicationContainer
-from controller import rtam_controller
-from controller.rtam_controller import fraud_detection_blueprint
-from service.interface.rtam_service import RTAMService
+from src.controller import rtam_controller
+from src.controller.rtam_controller import fraud_detection_blueprint
+from src.service.interface.rtam_service import RTAMService
 import warnings
 
 
@@ -19,7 +19,7 @@ def setup_di_modules(environment: str):
     print(f"\nMode: {environment}")
     application_container = ApplicationContainer()
     application_container.app_config.from_yaml(f"conf/app_config.{environment}.yml")
-    application_container.model_config.from_yaml(f"conf/model_config.yml")
+    # application_container.model_config.from_yaml(f"conf/model_config.yml")
     application_container.wire(modules)
 
 
@@ -51,4 +51,5 @@ if __name__ == "__main__":
     os.environ['APP_MODE'] = sys.argv[1] if len(sys.argv) > 1 else 'localdev'
     setup_di_modules(os.environ['APP_MODE'])
     warnings.filterwarnings("ignore")
+    # predict_fraud()
     setup_blueprints()

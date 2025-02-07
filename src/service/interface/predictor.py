@@ -1,4 +1,6 @@
+import numpy as np
+
 
 class Predictor:
-    def predict(self, trans_feature):
+    def predict(self, features: np.ndarray) -> np.ndarray:
         pass

@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "40a0845b-cce7-45bc-816a-249626e23376",
+		"name": "rtam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15957412"
+	},
+	"item": [
+		{
+			"name": "predict",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "0.0.0.0:8080/predict",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"predict"
+					],
+					"query": [
+						{
+							"key": "last",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    { \"transaction_id\": \"0xc5061da6f7c89ab\", \"is_large\": true, \"is_rapid\": false, \"is_fraud\": false },\n    { \"transaction_id\": \"0xa17b3c59e24d8f1\", \"is_large\": false, \"is_rapid\": true, \"is_fraud\": true },\n    { \"transaction_id\": \"0xfbc91a27d34e65c\", \"is_large\": true, \"is_rapid\": true, \"is_fraud\": true },\n    { \"transaction_id\": \"0xd529f61b08347ea\", \"is_large\": false, \"is_rapid\": false, \"is_fraud\": false },\n    { \"transaction_id\": \"0x8e15b4c7d92fa3b\", \"is_large\": true, \"is_rapid\": false, \"is_fraud\": true },\n    { \"transaction_id\": \"0x3a27f9d05b8462e\", \"is_large\": false, \"is_rapid\": true, \"is_fraud\": false },\n    { \"transaction_id\": \"0xb682ef34c91578d\", \"is_large\": true, \"is_rapid\": true, \"is_fraud\": false },\n    { \"transaction_id\": \"0x9fc84d2b710a65e\", \"is_large\": false, \"is_rapid\": false, \"is_fraud\": true }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "0.0.0.0:8080/feedback",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8080",
+					"path": [
+						"feedback"
+					],
+					"query": [
+						{
+							"key": "fds",
+							"value": "124",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

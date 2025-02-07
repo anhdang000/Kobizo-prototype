@@ -10,10 +10,10 @@ graph_db:
 
 main_db:
   dbms_name : 'PostgreSQL'
-  uri : 'abc'
+  uri : 'postgresql://neondb_owner:Ft3vqRmDxA8s@ep-orange-term-a511wxk5.us-east-2.aws.neon.tech/neondb?sslmode=require'
 
 data:
-  chunk_size: 10000
+  batch_size: 5
 
 notification:
   enabled: true
